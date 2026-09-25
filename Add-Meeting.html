@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Meeting</title>
+</head>
+<body>
+    <h1>Add Meeting</h1>
+    <form>
+        <label for="meeting-name">Meeting Name:<span>*</span></label>
+        <input type="text" id="meeting-name" name="meeting-name" required>
+        <label for="meeting-date">Date:</label>
+        <input type="date" id="meeting-date" name="meeting-date">
+        <label for="meeting-owner">Owner:<span>*</span></label>
+        <input type="text" id="meeting-owner" name="meeting-owner" required>
+        <label for="meeting-notes">Notes:<span>*</span></label>
+        <textarea id="meeting-notes" name="meeting-notes" required></textarea>
+        <label for="Actionitems">Action Items:<span>*</span></label>
+        <textarea id="Actionitems" name="Actionitems" required></textarea>
+        <label for="status">Status:<span>*</span></label>
+        <select id="status" name="status" required>
+            <option value="not-started">Not Started</option>
+            <option value="in-progress">In Progress</option>
+            <option value="completed">Completed</option>
+        </select>
+        <button type="submit">+ Add Meeting</button>
+    </form>
+</body>
+</html>
