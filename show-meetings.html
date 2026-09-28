@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Previous Meetings</title>
+    <link rel="stylesheet" href="show-meeting.css">
+    <script defer src="show-meeting.js"></script>
 </head>
 <body>
-    <h1>Previous Meetings</h1>
-    <p>This is where the previous meetings will be displayed.</p>
+    <header>
+        <h1>Previous Meetings</h1>
+        <p class="subtitle">View, search, edit, or delete your saved meeting notes.</p>
+        <button id="backBtn" onclick="window.location.href='index.html'">Back to Home</button>
+    </header>
+    <main>
+        <section class="search-filter-bar">
+            <input type="text" id="searchInput" placeholder="Search by title, notes, owner...">
+            <select id="filterStatus">
+                <option value="all">All Statuses</option>
+                <option value="not-started">Not Started</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+        </section>
+        <div id="meetingsGrid" class="meetings-grid"></div>
+    </main>
 </body>
 </html>
