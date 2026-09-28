@@ -1,0 +1,103 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 1em;
+  background: #f1f5f9;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #1e3a8a;
+  margin-bottom: 28px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+label {
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-top: 10px;
+  color: #334155;
+}
+
+label span { color: #ef4444; margin-left: 2px; }
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95em;
+  font-family: inherit;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  background: #f8fafc;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+textarea { resize: vertical; min-height: 90px; }
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+input:hover, textarea:hover, select:hover { border-color: #94a3b8; }
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+button[type="submit"] {
+  margin-top: 24px;
+  padding: 14px;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+button[type="submit"]:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37,99,235,0.35);
+}
+button[type="submit"]:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+@media (min-width: 640px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+  label[for="meeting-notes"], #meeting-notes,
+  label[for="Actionitems"], #Actionitems,
+  label[for="meeting-name"], #meeting-name,
+  button[type="submit"] {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 480px) {
+  body { padding: 20px 12px; }
+  form { padding: 20px; }
+  h1 { font-size: 1.6em; margin-bottom: 20px; }
+}
